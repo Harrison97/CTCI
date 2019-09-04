@@ -1,7 +1,7 @@
 import doctest
 import LinkedList
 
-LinkedList = LinkedList.LinkedList
+LinkedList = LinkedList.SinglyLinkedList
 
 # These are the best two options.
 # We could sort, then delete. But the fastest sort would be O(nlogn) time, with O(n) space.

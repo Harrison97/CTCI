@@ -1,9 +1,9 @@
 # Python3
 # LinkList module
 # Created By Harrison Hayes
-class LinkedList:
+class SinglyLinkedList:
     """
-    Data Structure that holds a list of links of any type.
+    Implementation of the Singly Linked List Data Structure.
     """
     class Node:
         def __init__(self, v):
@@ -12,7 +12,6 @@ class LinkedList:
 
     def __init__(self, *args):
         self.head = self.Node(args[-1])
-        self.tail = self.head
         self.len = 1
         for arg in reversed(args[:-1]):
             self.append_to_front(arg)
@@ -40,7 +39,6 @@ class LinkedList:
         while curr.next:
             curr = curr.next
         curr.next = temp
-        self.tail = temp
         self.len += 1
 
     def append_to_front(self, v):
