@@ -13,11 +13,13 @@ class SinglyLinkedList:
     def __init__(self, *args):
         if len(args) == 0:
             self.head = None
+            self.tail = None
             self.len = 0
             return
         if type(args[0]) == list and len(args) == 1:
             args = args[0]
         self.head = self.Node(args[-1])
+        self.tail = self.head
         self.len = 1
         for arg in reversed(args[:-1]):
             self.append_to_front(arg)
@@ -82,22 +84,20 @@ class SinglyLinkedList:
             self.append_to_front(v)
             return
         temp = self.Node(v)
-        curr = self.head
-        while curr.next:
-            curr = curr.next
-        curr.next = temp
+        self.tail.next = temp
+        self.tail = temp
         self.len += 1
 
     def append_to_front(self, v):
         temp = self.Node(v)
         temp.next = self.head
         self.head = temp
+        if self.len == 0:
+            self.tail = temp
         self.len += 1
 
     def append_node_to_tail(self, n):
-        curr = self.head
-        while curr.next:
-            curr = curr.next
-        curr.next = n
+        self.tail.next = n
+        self.tail = n
         self.len += 1
 
