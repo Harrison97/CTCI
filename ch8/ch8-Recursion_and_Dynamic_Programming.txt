@@ -1,0 +1,14 @@
+8.1 - Triple Step
+8.2 - Robot in a Grid
+8.3 - Magic Index
+8.4 - Power Set
+8.5 - Recursive Multiply
+8.6 - Towers of Hanoi
+8.7 _ Permutations Without Dups
+8.8 _ Permutations With Dups
+8.9 _ Parens
+8.10 _ Paint Fill
+8.11 _ Coins
+8.12 _ Eight Queens
+8.13 _ Stack of Boxes
+8.14 _ Boolean Evaluations
